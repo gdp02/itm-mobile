@@ -3,11 +3,9 @@ HOST: http://itm-itm.com/api
 
 # ITM ITS
 
-URL Aplikasi : http://itm-itm.com/api
+## CRUD Walkthrough [/walkthrough]
 
-## CRUD intro [/intro]
-
-### Create Intro [POST/intro]
+### Create Walkthrough [POST/walkthrough]
 
 + Request (application/json)
 
@@ -36,7 +34,7 @@ URL Aplikasi : http://itm-itm.com/api
                 "src": "/Upload/image.jpg",
             }
 
-### List All Intro [GET /intro]
+### List All Walkthrough [GET /walkthrough]
 
 + Request (application/json)
 
@@ -64,7 +62,7 @@ URL Aplikasi : http://itm-itm.com/api
         
 
 
-### List Detail Intro [GET /intro/{id}]
+### List Detail Walkthrough [GET /walkthrough/{id}]
 
 + Request (application/json)
 
@@ -86,15 +84,14 @@ Jika ID tidak ada sebelumnya, maka tidak bisa get
     + Body
 
             {
-               "message": "Couldn't find BookList with 'id'=#"
+               "message": "Couldn't find walkthrough with 'id'=#"
             }
 
 
 
-### Update Intro [PUT /intro/{id}]
+### Update Walkthrough [PUT /walkthrough/{id}]
 
 + Parameters
-    + id (number) - ID of status must integer
 
 + Request (application/json)
     
@@ -129,7 +126,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             }
 
 
-### Delete Intro [DELETE /intro/{id}]
+### Delete Walkthrough [DELETE /walkthrough/{id}]
 
 + Request (application/json)
 
@@ -138,7 +135,6 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
 
 + Parameters
-    + id (number) - ID of status must integer
 
 + Response 200 (application/json)
 
@@ -150,9 +146,9 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             }
           
 
-## CRUD Member [/member]
+## CRUD Member Choose [/memberchoose]
 
-### Create Member [POST/member]
+### Create Member Choose [POST/memberchoose]
 
 + Request (application/json)
 
@@ -166,13 +162,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
                 
                 "title": "$30.00 Family",
                 "value": "30",
-                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                            <ul style='list-style-type: square;'>
-                            <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                            </ul>"
-                
+                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
             }
 
 + Response 201 (application/json)
@@ -183,15 +173,10 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
                 "id": 1,
                 "title": "$30.00 Family",
                 "value": "30",
-                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                            <ul style='list-style-type: square;'>
-                            <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                            </ul>"
+                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
             }
 
-### List All Member [GET /member]
+### List All Member Choose[GET /memberchoose]
 
 + Request (application/json)
 
@@ -206,30 +191,26 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
         {
             "id": 1,
             "title": "$30.00 Family",
-                "value": "30",
-                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                            <ul style='list-style-type: square;'>
-                            <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                            </ul>"
+            "value": "30",
+            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
         },
         {
             "id": 2,
             "title": "$250.00 Life Member",
-                "value": "250",
-                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                            <ul style='list-style-type: square;'>
-                            <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                            </ul>"
+            "value": "250",
+            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
+        },
+        {
+            "id": 3,
+            "title": "Free",
+            "value": "0",
+            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
         }
     ]
         
 
 
-### List Detail Member [GET /member/{id}]
+### List Detail Member Choose[GET /memberchoose/{id}]
 
 + Request (application/json)
 
@@ -241,13 +222,8 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
         {
             "id": 1,
             "title": "$30.00 Family",
-                "value": "30",
-                "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                            <ul style='list-style-type: square;'>
-                            <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                            <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                            </ul>",
+            "value": "30",
+            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
         }
         
 + Response 409 (application/json)
@@ -261,7 +237,7 @@ Jika ID tidak ada sebelumnya, maka tidak bisa get
 
 
 
-### Update Member [PUT /member/{id}]
+### Update Member Choose[PUT /memberchoose/{id}]
 
 + Parameters
     + id (number) - ID of status must integer
@@ -284,12 +260,7 @@ Jika ID tidak ada sebelumnya, maka tidak bisa get
            "id": 1,
             "title": "$30.00 Family Friend",
             "value": "30",
-            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2>
-                        <ul style='list-style-type: square;'>
-                        <li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li>
-                        <li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li>
-                        <li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li>
-                        </ul>"
+            "howToPay": "<h2 style='text-align: center;'><span style='color: #000000;'>Complete your Registration Payment:</span></h2><ul style='list-style-type: square;'><li style='text-align: left;'><span style='color: #000000;'>Make payment by transferring to BCA account number&nbsp;<strong>0092-3345-443&nbsp;</strong>under the&nbsp;<strong>Indonesian Tamil Sangam account name.</strong></span></li><li style='text-align: left;'><span style='color: #000000;'>Confirm your payment to the Indonesian Tamil Sangam admin via chat.</span></li><li style='text-align: left;'><span style='color: #000000;'>You can enter the application with an account that has been registered. While waiting for the payment&nbsp; to be confirmed by the Indonesian Tamil Sangam admin.</span></li></ul>"
         }
         
 + Response 422 (application/json)
@@ -304,7 +275,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             }
 
 
-### Delete Member [DELETE /member/{id}]
+### Delete Member Choose[DELETE /memberchoose/{id}]
 
 + Request (application/json)
 
@@ -328,7 +299,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
 
 ## Signup [/signup]
 
-### Signup User [POST]
+### Signup Member [POST]
 
 + Request (application/json)
 
@@ -380,7 +351,7 @@ Jika signup dengan email yang sama/yang sudah terdaftar sebelumnya, maka tidak b
 
 ## Login [/auth/login]
 
-### Login User [POST]
+### Login Member [POST]
 
 + Request (application/json)
 
@@ -413,9 +384,9 @@ maka tidak bisa login
                 "message": "Invalid credentials"
             }
 
-## CRUD User [/users]
+## CRUD Member [/members]
 
-### List All Users [GET /users]
+### List All Member [GET /member]
 
 + Request (application/json)
 
@@ -480,7 +451,7 @@ maka tidak bisa login
         ]
 
 
-### List Detail Users [GET /users/{id}]
+### List Detail Member [GET /member/{id}]
 
 + Request (application/json)
 
@@ -601,7 +572,6 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
 
 + Parameters
-    + id (number) - ID of user must integer
 
 + Response 200 (application/json)
 
@@ -610,3 +580,136 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             {
                 "status": "OK",
                 "result": "User has been deleted"
+                
+            }
+            
+            
+## CRUD Country [/country]
+
+### Create Country [POST/country]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
+            
+    + Body
+
+            {
+                
+                "name": "Indonesian"
+                
+            }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "id": 1,
+                "name": "Indonesia"
+            }
+
+### List All Country [GET /country]
+
++ Request (application/json)
+
+    + Headers
+
+        
+
++ Response 200 (application/json)
+
+        
+    [
+        {
+            "id": 1,
+            "name": "Indonesia"
+        },
+        {
+            "id": 2,
+            "name": "India"
+        }
+    ]
+        
+
+
+### List Detail Country [GET /country/{id}]
+
++ Request (application/json)
+
+    + Headers
+
+           
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Indonesia"
+        }
+        
++ Response 409 (application/json)
+Jika ID tidak ada sebelumnya, maka tidak bisa get
+
+    + Body
+
+            {
+               "message": "Couldn't find country with 'id'=#"
+            }
+
+
+
+### Update Country [PUT /country/{id}]
+
++ Parameters
+
++ Request (application/json)
+    
+    + Headers
+
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
+    
+    + Body
+
+            {
+            "name": "Singapure"
+            }
+    
++ Response 200 (application/json)
+
+        {
+           "id": 2,
+           "name": "Singapure"
+        }
+        
++ Response 422 (application/json)
+Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
+ tidak boleh kosong
+ 
+ + Body
+
+            {
+                "status": "FAIL",
+                "message": "can't be blank"
+            }
+
+
+### Delete Country [DELETE /country/{id}]
+
++ Request (application/json)
+
+    + Headers
+
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
+
++ Parameters
+
++ Response 200 (application/json)
+
+  + Body
+
+            {
+                "status": "OK",
+                "message": "intro has been deleted"
+            }
