@@ -31,7 +31,7 @@ HOST: http://itm-itm.com/api
                 "id": 1,
                 "title": "Easy to use",
                 "desc": "lorem ipsum dolor sit amet",
-                "src": "/Upload/image.jpg",
+                "src": "/Upload/image.jpg"
             }
 
 ### List All Walkthrough [GET /walkthrough]
@@ -50,13 +50,13 @@ HOST: http://itm-itm.com/api
             "id": 1,
             "title": "Easy to use",
             "desc": "lorem ipsum dolor sit amet",
-            "src": "/Upload/image.jpg",
+            "src": "/Upload/image.jpg"
         },
         {
             "id": 2,
             "title": "Easy to use",
             "desc": "lorem ipsum dolor sit amet",
-            "src": "/Upload/image.jpg",
+            "src": "/Upload/image.jpg"
         }
     ]
         
@@ -111,7 +111,7 @@ Jika ID tidak ada sebelumnya, maka tidak bisa get
            "id": 1,
             "title": "Easy to use update",
             "desc": "lorem ipsum dolor sit amet",
-            "src": "/Upload/image.jpg",
+            "src": "/Upload/image.jpg"
         }
         
 + Response 422 (application/json)
@@ -142,7 +142,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
 
             {
                 "status": "OK",
-                "message": "intro has been deleted"
+                "message": "Walkthrough has been deleted"
             }
           
 
@@ -325,7 +325,8 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             "countryId": 12,
             "city": "Jakarta",
             "address": "Jl. Radio dalam No, 112 rt03/rw09",
-            "postCode": "40324"
+            "postCode": "40324",
+            "memberChooseId": 1
                 
         }
 
@@ -392,8 +393,6 @@ maka tidak bisa login
 
     + Headers
 
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE1Mjc5Mjg4NDV9.9k1N9JM02mzHDb4nt1KpfJr0poSBCNPS2vr_fwa0Bro"
-    
 
 + Response 200 (application/json)
 
@@ -421,8 +420,8 @@ maka tidak bisa login
                 "countryId": 12,
                 "city": "Jakarta",
                 "address": "Jl. Radio dalam No, 112 rt03/rw09",
-                "postCode": "40324"
-                "status": "TRUE"
+                "postCode": "40324",
+                "status": "TRUE",
                 "memberChooseId": 1
             },
             {
@@ -444,14 +443,14 @@ maka tidak bisa login
                 "countryId": 12,
                 "city": "Jakarta",
                 "address": "Jl. Radio dalam No, 112 rt03/rw09",
-                "postCode": "40324"
-                "status": "TRUE"
+                "postCode": "40324",
+                "status": "TRUE",
                 "memberChooseId": 1
             }
         ]
 
 
-### List Detail Member [GET /member/{id}]
+### List Detail Member [GET /profile]
 
 + Request (application/json)
 
@@ -483,13 +482,13 @@ maka tidak bisa login
             "countryId": 12,
             "city": "Jakarta",
             "address": "Jl. Radio dalam No, 112 rt03/rw09",
-            "postCode": "40324"
-            "status": "TRUE"
+            "postCode": "40324",
+            "status": "TRUE",
             "memberChooseId": 1
         }
 
 
-### Update User [PUT /users/{id}]
+### Update User [PUT /profile/edit]
 
 + Parameters
     + id (number) - ID of user must integer
@@ -520,8 +519,8 @@ maka tidak bisa login
             "countryId": 12,
             "city": "Jakarta",
             "address": "Jl. Radio dalam No, 112 rt03/rw09",
-            "postCode": "40324"
-            "status": "TRUE"
+            "postCode": "40324",
+            "status": "TRUE",
             "memberChooseId": 1
             }
     
@@ -546,8 +545,8 @@ maka tidak bisa login
             "countryId": 12,
             "city": "Jakarta",
             "address": "Jl. Radio dalam No, 112 rt03/rw09",
-            "postCode": "40324"
-            "status": "TRUE"
+            "postCode": "40324",
+            "status": "TRUE",
             "memberChooseId": 1
         }
         
@@ -563,7 +562,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
             }
 
 
-### Delete User [DELETE /users/{id}]
+### Delete User [DELETE /member/{id}]
 
 + Request (application/json)
 
@@ -598,7 +597,7 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
 
             {
                 
-                "name": "Indonesian"
+                "name": "Indonesia"
                 
             }
 
@@ -711,5 +710,5 @@ Jika field yang akan diedit kosong, maka akan muncul pesan dimana field tersebut
 
             {
                 "status": "OK",
-                "message": "intro has been deleted"
+                "message": "Country has been deleted"
             }
